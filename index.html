@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <label for="txtBarCode">Bar code:</label>
+    <input type="text" id="txtBarCode" name="txtBarcode" placeholder=" scan barcode...." >
+</body>
+
+<script>
+    
+    let barCode = document.getElementById("txtBarCode")
+    barCode.focus();
+    barCode.select();
+    barCode.onchange = function() {processBarCode()};
+    
+
+
+    processBarCode = () => {
+        console.log(barCode.value)
+        barCode.value = ''
+    }
+   
+
+</script>
+</html>
